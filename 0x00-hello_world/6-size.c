@@ -2,7 +2,7 @@
 /**
  * main - A programme that prints the size of variuos data types
  * Return: 0 (sucess)
- * /
+ */
 
 int main(void)
 {
