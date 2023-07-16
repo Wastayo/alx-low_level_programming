@@ -9,7 +9,7 @@
   */
 
 int main(void)
-{	
+{
 	int n, last;
 
 	srand(time(0));
@@ -29,4 +29,4 @@ int main(void)
 		printf(" and is less than 6 and not 0\n");
 	}
 		return (0);
-}	
+}
