@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Description: this function returns a condition statement
- * Return: This return 0
- */
+  * main - Entry point
+  * Description: this function returns a condition statement
+  * Return: This return 0
+  */
 
 int main(void)
 {
