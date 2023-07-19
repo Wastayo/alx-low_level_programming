@@ -1,26 +1,22 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-  * main - prints out the addition of natural number
-  * Description: prints out the additon of natural number under 1024
-  * Return: returns void
+  * add - takes two parameter
+  * @num1: parameter 1
+  * @num2: parameter 2
+  *
+  * Description: the function takes the parameter and prints out
+  * the addition of the two
+  *
+  * Return: returns the addition of the two int
   */
 
-int main(void)
+int add(int num1, int num2)
 {
-	int num =  0;
-	int total = 0;
+	int total;
 
-	while (num < 1024)
-	{
-		if (num % 3 == 0 || num % 5 == 0)
-		{
-			total += num;
-		}
-		num++;
-	}
-	printf("%i\n", total);
-	return (0);
-
+	total = num1 + num2;
+	return (total);
 }
