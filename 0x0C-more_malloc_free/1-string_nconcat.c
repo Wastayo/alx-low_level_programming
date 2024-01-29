@@ -1,59 +1,45 @@
-#include <stdio.h>
-		
-#include <stdlib.h>
-		
 #include "main.h"
-		
+#include <stdlib.h>
+
 /**
-		
- * _strdup - duplicate to new memory space location
-		
- * @str: char
-		
- * Return: 0
-		
+ * string_nconcat - Concatenates two strings using at
+ *                  most an inputted number of bytes.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The maximum number of bytes of s2 to concatenate to s1.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - a pointer to the concatenated space in memory.
  */
-		
-char *_strdup(char *str)
-		
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-		
-	char *aaa;
-		
-	int i, r = 0;
-		
+	char *concat;
+	unsigned int len = n, index;
 
-		
-	if (str == NULL)
-		
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	for (index = 0; s1[index]; index++)
+		len++;
+
+	concat = malloc(sizeof(char) * (len + 1));
+
+	if (concat == NULL)
 		return (NULL);
-		
-	i = 0;
-		
-	while (str[i] != '\0')
-		
-		i++;
-		
 
-		
-	aaa = malloc(sizeof(char) * (i + 1));
-		
+	len = 0;
 
-		
-	if (aaa == NULL)
-		
-		return (NULL);
-		
+	for (index = 0; s1[index]; index++)
+		concat[len++] = s1[index];
 
-		
-	for (r = 0; str[r]; r++)
-		
-		aaa[r] = str[r];
-		
+	for (index = 0; s2[index] && index < n; index++)
+		concat[len++] = s2[index];
 
-		
-	return (aaa);
-		
+	concat[len] = '\0';
+
+	return (concat);
 }
-
 
